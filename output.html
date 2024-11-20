@@ -1,0 +1,78 @@
+<html><head><style>
+      body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; }
+      h1 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+      h2 { color: #34495e; margin-top: 30px; }
+      code { background: #f8f9fa; padding: 2px 5px; border-radius: 3px; }
+      pre { background: #f8f9fa; padding: 15px; border-radius: 5px; overflow-x: auto; }
+      a { color: #3498db; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+    </style></head><body><h1>GitBook PDF Generator</h1>
+<p>A tool to convert GitBook-style markdown documentation into PDF.</p>
+<h2>Setup</h2>
+<pre><code class="language-bash">npm install
+</code></pre>
+<h2>Usage</h2>
+<p>There are two ways to generate PDFs:</p>
+<ol>
+<li>Using Puppeteer (recommended):</li>
+</ol>
+<pre><code class="language-bash">npm start
+</code></pre>
+<ol start="2">
+<li>Using markdown-pdf:</li>
+</ol>
+<pre><code class="language-bash">node generate-pdf.js
+</code></pre>
+<p>Both methods will generate <code>output.pdf</code> in the project root.</p>
+<h2>Project Structure</h2>
+<ul>
+<li><code>README.md</code> - This documentation</li>
+<li><code>chapters/</code> - Your markdown content</li>
+<li><code>index.js</code> - Main PDF generator (Puppeteer)</li>
+<li><code>generate-pdf.js</code> - Alternative PDF generator (markdown-pdf)</li>
+</ul>
+<h2>Adding Content</h2>
+<ol>
+<li>Place your markdown files in the project</li>
+<li>Files will be processed in this order:<ul>
+<li>README.md first</li>
+<li>Other files alphabetically</li>
+</ul>
+</li>
+<li>Run the generator using one of the methods above</li>
+</ol>
+<p>The generated PDF will include all markdown files with proper styling and formatting.</p>
+<hr><h1>Chapter 1</h1>
+<p>This is the content of chapter 1.</p>
+<p>Some example content here...</p>
+<hr><h1>Chapter 2</h1>
+<p>This is the content of chapter 2.</p>
+<p>Some example content here...</p>
+<hr><h1>My GitBook</h1>
+<p>Welcome to my documentation!</p>
+<p>This documentation can be converted to PDF using gitbook2pdf.</p>
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="README.md">Introduction</a></li>
+<li><a href="chapters/chapter1.md">Chapter 1</a></li>
+<li><a href="chapters/chapter2.md">Chapter 2</a></li>
+</ul>
+<h1>Chapter 1</h1>
+<p>This is the content of chapter 1.</p>
+<p>Some example content here...</p>
+<h1>Chapter 2</h1>
+<p>This is the content of chapter 2.</p>
+<p>Some example content here...</p>
+<h1>Summary</h1>
+<ul>
+<li><a href="README.md">Introduction</a></li>
+<li><a href="chapters/chapter1.md">Chapter 1</a></li>
+<li><a href="chapters/chapter2.md">Chapter 2</a></li>
+</ul>
+<hr><h1>Summary</h1>
+<ul>
+<li><a href="README.md">Introduction</a></li>
+<li><a href="chapters/chapter1.md">Chapter 1</a></li>
+<li><a href="chapters/chapter2.md">Chapter 2</a></li>
+</ul>
+<hr></body></html>

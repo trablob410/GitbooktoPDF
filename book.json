@@ -1,0 +1,10 @@
+{
+  "plugins": ["download-pdf-link"],
+  "pluginsConfig": {
+    "download-pdf-link": {
+      "base": "https://www.gitbook.com/download/pdf/book/yourusername/yourbook",
+      "label": "Download PDF",
+      "multilingual": false
+    }
+  }
+}
